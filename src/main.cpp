@@ -206,6 +206,15 @@ void setup()
 
   const char* vetorCaracteres = novaFrase.c_str();
   Serial.println("Oi");
+
+  //Formatacao na exibicao
+  char buffer [60]; //define o maximo de caracteres
+  int anoAtual = 2026;
+
+  //snprintf guarda o formato desejado respeitando o tamanho
+  snprintf(buffer, sizeof(buffer), "O prof %s é muito legal\n\r Ano Atual: %d\n\r 100%%", nomeCompleto.c_str(), anoAtual);
+
+  Serial.print(buffer);
 }
 
 void loop()
